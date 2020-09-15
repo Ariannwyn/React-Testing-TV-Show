@@ -1,6 +1,5 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-
 import Episodes from "./Episodes";
 
 const mockEpisodes = [
@@ -189,5 +188,6 @@ test("Episodes renders correctly", () => {
   rerender(<Episodes episodes={mockEpisodes} />);
 
   const episodeList = screen.getAllByTestId(/episode/i);
+
   expect(episodeList).toHaveLength(1);
 });
